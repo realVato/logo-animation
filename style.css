@@ -1,0 +1,51 @@
+body {
+    background-color: #444;
+}
+
+svg {
+    position: absolute;
+    top: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+}
+
+svg circle {
+    stroke: #fff;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: 3s circle-outline infinite alternate;
+}
+
+svg path {
+    stroke: #fff;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    animation: 3s text-outline infinite alternate;
+}
+
+@keyframes circle-outline {
+    from {
+        stroke-dashoffset: 500;
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes text-outline {
+    from {
+        stroke-dashoffset: 400;
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
